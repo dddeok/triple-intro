@@ -18,7 +18,7 @@
     "paths": {
       "@features/*": ["src/features/*"],
       "@utils/*": ["src/utils/*"],
-      "@component/*": ["src/common/*"]
+      "@common/*": ["src/common/*"]
     }
   },
   "exclude": ["node_modules"],

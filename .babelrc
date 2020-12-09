@@ -8,6 +8,18 @@
         "displayName": true, // 태그 class명에 디렉토리, 컴포넌트명 추가
         "preprocess": false
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "extensions": [".tsx", ".ts", ".js", "jsx"],
+        "root": ["."],
+        "alias": {
+          "@common": "./src/common",
+          "@features": "./src/features",
+          "@utils": "./src/utils"
+        }
+      }
     ]
   ]
 }

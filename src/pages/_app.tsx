@@ -15,7 +15,7 @@ class MyApp extends App {
     return (
       <>
         <GlobalStyle />
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </>
     );
   }
