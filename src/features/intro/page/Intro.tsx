@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '@features/intro/container/header/Header';
-import AwardSection from '@features/intro/container/section/AwardSection';
+import MainSection from '@features/intro/container/section/MainSection';
 const Intro = () => {
   return (
     <IntroContainer>
       <Header />
-      <AwardSection />
+      <MainSection />
     </IntroContainer>
   );
 };

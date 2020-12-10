@@ -22,8 +22,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
 
   font-size: 36px;
   color: #3a3a3a;
+  margin-bottom: 20px;
 `;
