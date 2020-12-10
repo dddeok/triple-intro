@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from '@features/intro/container/header/Header';
 import MainSection from '@features/intro/container/section/MainSection';
+
 const Intro = () => {
   return (
     <IntroContainer>
