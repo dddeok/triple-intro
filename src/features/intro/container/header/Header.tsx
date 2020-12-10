@@ -6,12 +6,16 @@ import { Link } from '@features/intro/component/link/Link';
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>
+      <Logo href="/">
         <strong>Triple</strong>
       </Logo>
       <LinkContainer>
-        <LinkText>Triple Team</LinkText>
-        <LinkText>Contact</LinkText>
+        <LinkText href="https://triple-corp.com" target="_blank">
+          Triple Team
+        </LinkText>
+        <LinkText href="https://triple-corp.com/#contact" target="_blank">
+          Contact
+        </LinkText>
       </LinkContainer>
     </HeaderContainer>
   );

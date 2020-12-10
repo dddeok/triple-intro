@@ -2,7 +2,7 @@ import React from 'react';
 import App from 'next/app';
 
 import { GlobalStyle } from '@common/styles/GlobalStyle';
-
+import { ReactHelmet } from '@common/component/helmet/Helmet';
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     return {
@@ -15,7 +15,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <>
-        {/* <ReactHelmet /> */}
+        <ReactHelmet />
         <GlobalStyle />
         <Component {...pageProps} />
       </>
