@@ -8,7 +8,7 @@ export const fadeIn = css`
   animation-fill-mode: forwards;
   @keyframes fadeIn {
     0% {
-      transform: translateY(10%);
+      transform: translateY(10px);
       opacity: 0;
     }
     66% {

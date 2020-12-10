@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fadeIn } from '@common/styles/animation';
+import { fadeIn } from '@common/styles/animationCss';
 
 const ImageSection = () => {
   return (
