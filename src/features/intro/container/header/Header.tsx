@@ -24,6 +24,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   width: 100%;
   min-height: 80px;
+  max-height: 80px;
   border: 1px solid rgb(239, 239, 239);
   padding: 0 50px;
   background: #fff;
@@ -43,4 +44,6 @@ const Logo = styled(Link)`
 const LinkText = styled(Link)`
   margin-left: 34px;
   color: rgba(58, 58, 58, 0.8);
+  height: 80px;
+  line-height: 80px;
 `;
