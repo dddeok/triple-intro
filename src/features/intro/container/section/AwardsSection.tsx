@@ -37,7 +37,7 @@ export default AwardsSection;
 const AwardContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px;
   animation-delay: 0.3s;
-  ${fadeIn};
+  ${fadeIn}; */
 `;

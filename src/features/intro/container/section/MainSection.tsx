@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 import ImageSection from '@features/intro/container/section/ImageSection';
 import MetricSection from '@features/intro/container/section/MetricSection';
 import AwardsSection from '@features/intro/container/section/AwardsSection';
 
+import useScrollFadeIn from '@features/intro/hook/useScrollFadeIn.hook';
+
 const MainSection = () => {
+  const ref = useRef(null);
+
   return (
-    <MainContainer>
+    <MainContainer ref={ref}>
       <ContentContainer>
         <ImageSection />
         <ContentSection>

@@ -8,7 +8,9 @@ const Intro = () => {
   return (
     <IntroContainer>
       <Header />
+      <Dumy />
       <MainSection />
+      <Dumy />
     </IntroContainer>
   );
 };
@@ -21,4 +23,9 @@ const IntroContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: scroll;
+`;
+
+const Dumy = styled.div`
+  width: 100%;
+  height: 780px;
 `;

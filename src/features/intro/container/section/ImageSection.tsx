@@ -16,9 +16,9 @@ export default ImageSection;
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  animation-delay: 0.1s;
+  /* animation-delay: 0.1s;
   animation-name: fadeIn;
-  ${fadeIn};
+  ${fadeIn}; */
 `;
 
 const ImageCation = styled.span`

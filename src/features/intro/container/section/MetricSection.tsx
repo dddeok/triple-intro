@@ -34,9 +34,9 @@ const MetricContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 420px;
-
+  /* 
   animation-delay: 0.2s;
 
   margin-left: 20px;
-  ${fadeIn};
+  ${fadeIn}; */
 `;
