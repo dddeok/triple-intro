@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MetricItem from '@features/intro/component/item/MetricItem';
-import { fadeIn } from '@common/styles/animationCss';
+import useScrollFadeIn from '@features/intro/hook/useScrollFadeIn.hook';
 
 const metriMap = [
   { type: 'user', count: 350, countType: '만 명', description: '사용자' },
@@ -11,18 +11,20 @@ const metriMap = [
 ];
 
 const MetricSection = () => {
+  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.2);
+
   return (
-    <MetricContainer>
+    <MetricContainer ref={ref} style={style}>
       {metriMap.map((metric) => {
         const { type, count, countType, description } = metric;
-        return (
+        return isIntersecting ? (
           <MetricItem
             key={type}
             count={count}
             countType={countType}
             description={description}
           />
-        );
+        ) : null;
       })}
     </MetricContainer>
   );
@@ -34,9 +36,4 @@ const MetricContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 420px;
-  /* 
-  animation-delay: 0.2s;
-
-  margin-left: 20px;
-  ${fadeIn}; */
 `;

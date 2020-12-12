@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import AwardItem from '@features/intro/component/item/AwradItem';
-import { fadeIn } from '@common/styles/animationCss';
+import useScrollFadeIn from '@features/intro/hook/useScrollFadeIn.hook';
 
 const awardMap = [
   {
@@ -22,11 +22,14 @@ const awardMap = [
 ];
 
 const AwardsSection = () => {
+  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.3);
   return (
-    <AwardContainer>
+    <AwardContainer ref={ref} style={style}>
       {awardMap.map((award) => {
         const { id, image, text, alt } = award;
-        return <AwardItem key={id} image={image} text={text} alt={alt} />;
+        return isIntersecting ? (
+          <AwardItem key={id} image={image} text={text} alt={alt} />
+        ) : null;
       })}
     </AwardContainer>
   );
@@ -37,7 +40,4 @@ export default AwardsSection;
 const AwardContainer = styled.div`
   display: flex;
   align-items: center;
-  /* margin-top: 20px;
-  animation-delay: 0.3s;
-  ${fadeIn}; */
 `;

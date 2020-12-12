@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fadeIn } from '@common/styles/animationCss';
+
+import useScrollFadeIn from '@features/intro/hook/useScrollFadeIn.hook';
 
 const ImageSection = () => {
+  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.1);
   return (
-    <ImageContainer>
-      <MainImage src="/assets/triple@2x.png" alt="Triple Image" />
-      <ImageCation>2019년 2월 기준</ImageCation>
+    <ImageContainer ref={ref} style={style}>
+      {isIntersecting ? (
+        <>
+          <MainImage src="/assets/triple@2x.png" alt="Triple Image" />
+          <ImageCation>2019년 2월 기준</ImageCation>
+        </>
+      ) : null}
     </ImageContainer>
   );
 };
@@ -16,9 +22,6 @@ export default ImageSection;
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* animation-delay: 0.1s;
-  animation-name: fadeIn;
-  ${fadeIn}; */
 `;
 
 const ImageCation = styled.span`

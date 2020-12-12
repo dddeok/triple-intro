@@ -27,11 +27,16 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
+  min-width: 1200px;
   min-height: 80px;
   max-height: 80px;
   border: 1px solid rgb(239, 239, 239);
   padding: 0 50px;
   background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 `;
 
 const LinkContainer = styled.div`
