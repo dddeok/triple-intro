@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useCountUp } from 'react-countup';
 
+import useCountup from '@features/intro/hook/useCountup';
 interface Props {
   countType: string;
   count: number;
@@ -9,6 +10,8 @@ interface Props {
 }
 const MetricItem = ({ count, countType, description }: Props) => {
   const { countUp } = useCountUp({ end: count });
+  // const { currentCount } = useCountup(count, 0, 100);
+
   return (
     <Container>
       <strong>{`${countUp}${countType}`}</strong>의 {description}

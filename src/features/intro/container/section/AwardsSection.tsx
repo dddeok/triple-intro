@@ -22,12 +22,12 @@ const awardMap = [
 ];
 
 const AwardsSection = () => {
-  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.3);
+  const { ref, style, isInterSection } = useScrollFadeIn(0.7, 0.3);
   return (
     <AwardContainer ref={ref} style={style}>
       {awardMap.map((award) => {
         const { id, image, text, alt } = award;
-        return isIntersecting ? (
+        return isInterSection ? (
           <AwardItem key={id} image={image} text={text} alt={alt} />
         ) : null;
       })}

@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import useScrollFadeIn from '@features/intro/hook/useScrollFadeIn.hook';
 
 const ImageSection = () => {
-  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.1);
+  const { ref, style, isInterSection } = useScrollFadeIn(0.7, 0.1);
   return (
     <ImageContainer ref={ref} style={style}>
-      {isIntersecting ? (
+      {isInterSection ? (
         <>
           <MainImage src="/assets/triple@2x.png" alt="Triple Image" />
           <ImageCation>2019년 2월 기준</ImageCation>

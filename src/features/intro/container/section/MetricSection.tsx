@@ -11,13 +11,13 @@ const metriMap = [
 ];
 
 const MetricSection = () => {
-  const { ref, style, isIntersecting } = useScrollFadeIn(0.7, 0.2);
+  const { ref, style, isInterSection } = useScrollFadeIn(0.7, 0.2);
 
   return (
     <MetricContainer ref={ref} style={style}>
       {metriMap.map((metric) => {
         const { type, count, countType, description } = metric;
-        return isIntersecting ? (
+        return isInterSection ? (
           <MetricItem
             key={type}
             count={count}
